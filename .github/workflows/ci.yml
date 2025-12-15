@@ -39,8 +39,9 @@ jobs:
     - name: Trivy scan
       uses: aquasecurity/trivy-action@0.20.0
       with:
-        image-ref: $IMAGE_NAME
-        severity: 'CRITICAL,HIGH'
+        image-ref: ${{ env.IMAGE_NAME }}
+        format: table
+        severity: CRITICAL,HIGH
         exit-code: '1'
 
     - name: Push Docker image
