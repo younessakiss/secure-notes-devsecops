@@ -7,6 +7,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/notes")
 public class NoteController {
+    private static final String SECRET ="ghp_fake_secret_123456789";
 
     private List<String> notes = new ArrayList<>();
 
